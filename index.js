@@ -68,7 +68,7 @@ navigator.geolocation.getCurrentPosition(position => {
 });
 
 //------------------------------
-//--------todo list section-----------
+//--------todo list section----------
 //------------------------------
 
 const todoEl = document.getElementById("todo-input")
