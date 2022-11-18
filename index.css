@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+}    
+
+input, button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: 'Monda', sans-serif;
+}
+
+img {
+    pointer-events: none;
+}
+
+body {
+    margin: 0;
+    background: no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0px 0px 20px #242424;
+}
+
+main {
+    padding: 15px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+div.top {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1.time {
+    text-align: center;
+}
+
+div#crypto {
+    font-size: 1.3rem;
+}
+
+div#crypto > p {
+    margin: 0;
+}
+
+div#crypto-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+div#crypto-top > span {
+    margin-left: 10px;
+}
+
+div#weather {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-self: flex-start;
+    margin-top: -20px;
+}
+
+div#weather > img {
+    width: 70px;
+}
+
+p.weather-city {
+    width: 100%;
+    text-align: right;
+    margin: 0;
+    margin-top: -10px;
+}
+
+p.weather-temp {
+    margin: 0;
+    font-size: 1.7rem;
+    margin-left: -10px;
+}
+
+.hover-div {
+    margin: 5px;
+    height: 20px;
+    width: max-content;  
+    display: flex;
+    align-items: center; 
+   
+}
+
+
+span#remove {
+    display: none;
+    margin-left: 3px;
+    
+}
+
+.hover-div:hover #remove {
+    display: inline;
+}
+
+.input-box {
+    display: flex;
+}
+.input-el {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #25273C;
+    opacity: .9;
+    color: #FFF;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0 .5em;
+    width: 100%;
+    
+}
+
+.btn-el {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #5AFF31;
+    padding: 5px;
+    opacity: .9;
+}
+
+#todo-section {
+    width: 60%;
+    max-width: 400px;
+    font-family: 'Monda', sans-serif;
+    margin: 0 auto 30px auto;
+}
+
+.todo-list {
+    background-color: #25273C;
+    opacity: .9;
+    border-radius: 10px;
+    padding: 10px 30px;
+    margin-top: 5px;   
+}
+
+.container {
+    border-bottom: 1px solid #484040;
+    padding: 5px 0;
+    letter-spacing: 1px;
+    
+}
+
+.container p {
+    margin-left: 10px;
+    
+}
+
+.hidden {
+    display: none;
+}
