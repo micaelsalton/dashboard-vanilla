@@ -77,22 +77,23 @@ let id = 0
 let todoArr = []
 
 function renderList(){
-    let html = ""
-    for(let todo of todoArr){
-       html += `<div class="container">
-                    <div class="hover-div" id="hide-${todo.id}">
-                        <p data-text="${todo.id}">${todo.text}</p>
+    const html = todoArr.map(todo => {
+      const {id, text} = todo
+
+       return `<div class="container">
+                    <div class="hover-div" id="hide-${id}">
+                        <p data-text="${id}">${text}</p>
                         <span id="remove">
-                        <i data-delete="${todo.id}" class="material-icons" style="font-size:18px;color:red">remove_circle_outline</i>
+                        <i data-delete="${id}" class="material-icons" style="font-size:18px;color:red">remove_circle_outline</i>
                         </span>
                     </div>
-                    <div class="hidden" id="div-${todo.id}">
-                        <input type="text" value="${todo.text}" id="inp-${todo.id}">
-                        <button data-edit="${todo.id}">Arrow</button>
+                    <div class="hidden" id="div-${id}">
+                        <input type="text" value="${text}" id="inp-${id}">
+                        <button data-edit="${id}">Arrow</button>
                     </div>
                 </div>`
-    }
-    todoList.innerHTML = html
+    })
+    todoList.innerHTML = html.join("")
 }
 
 document.addEventListener("click", function(e){
@@ -149,4 +150,5 @@ function saveEdit(id){
 
 /*Próximas etapas, trazer um gerador de id e trocar esse número pq está criando problema com tipo
 exigindo o hackzinho de mudar a id do objeto pra string pq a id que tu recebe do e.target...
-é uma string*/
+é uma string
+-Arruma o css da edição e fazer o item editado ir pro começo da fila na lista*/
